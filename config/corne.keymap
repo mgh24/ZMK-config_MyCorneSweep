@@ -82,12 +82,12 @@ combos {
 // -----------------------------------------------------------------------------------------
 // |  ~   |  !  |  @  |  #  |  $  |  %  |      |  ^  |  &  |  *  |  (  |  )  | - |
 // |  [   |  ]  |  <  |  >  |  \  |     |      |     |     |     |     |     | = |
-// |   +  |  -  |  *  |  /  |  =  |     |      |     |     |     |     |     |   |
+// |   +  |  -  |  *  |  /  |  =  |     |      |BCSP |     |     |     |     |   |
 //                   | TRNS | TRNS | TRNS |           | TRNS| TRNS | TRNS |
                         bindings = <
    &kp TILDE  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT	     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR   &kp MINUS
    &kp LBKT   &kp RBKT   &kp LT    &kp GT     &kp BSLH   &none               &none      &none     &none      &none     &none      &kp EQUAL
-   &kp PLUS   &kp MINUS  &kp STAR  &kp BSLH   &kp EQUAL  &none               &none      &none     &none      &none     &none      &none
+   &kp PLUS   &kp MINUS  &kp STAR  &kp BSLH   &kp EQUAL  &none               &kp BSPC      &none     &none      &none     &none      &none
                           	                &trans  &trans  &trans                      &trans  &trans   &trans
                         >;
                 };
@@ -95,13 +95,13 @@ combos {
                 right_layer {
 // -----------------------------------------------------------------------------------------
 // | BTLDR|     |     | SHFT| CMD |  4  |         |     |     |     |     |     | BTLDR|
-// | CTRL |     |     |     |     |     |         |     |  HME|  UP | END |     |      |
-// | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |         |     | LFT | DWN | RGT |     |      |
+// |      |     |     |     |     |     |         |     |  HME|  UP | END |     |      |
+// | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |         |BCSP | LFT | DWN | RGT |     |      |
 //                 | TRNS |TRNS | TRNS |             | TRNS | TRNS | TRNS|
                         bindings = <
    &bootloader &none         &none         &kp LSHFT     &kp RCMD      &kp N4              &none    &none     &none      &none      &none   &bootloader
-   &kp LCTRL   &none         &none         &none         &none         &none               &none    &kp HOME  &kp UP     &kp END    &none   &none
-   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none    &kp LEFT  &kp DOWN   &kp RIGHT  &none   &none
+   &none       &none         &none         &none         &none         &none               &none    &kp HOME  &kp UP     &kp END    &none   &none
+   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp BSPC    &kp LEFT  &kp DOWN   &kp RIGHT  &none   &none
                     	                &trans  &trans  &trans                                       &trans  &trans  &trans
                         >;
                 };
