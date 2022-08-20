@@ -21,11 +21,6 @@
 / {
 combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
 	
 	combo_left-option {
             timeout-ms = <50>;
@@ -35,7 +30,7 @@ combos {
         
          combo_tab {
             timeout-ms = <50>;
-            key-positions = <10 11>;
+            key-positions = <12 13>;
             bindings = <&kp TAB>;
         };
         
@@ -54,7 +49,7 @@ combos {
         
            	    combo_right-command {
             timeout-ms = <50>;
-            key-positions = <16 17>;
+            key-positions = <19 20>;
             bindings = <&kp RCMD>;
         };
                        combo_layer3 {
@@ -86,28 +81,28 @@ combos {
                 left_layer {
 // -----------------------------------------------------------------------------------------
 // |  ~   |  !  |  @  |  #  |  $  |  %  |      |  ^  |  &  |  *  |  (  |  )  | - |
-// |  [   |  ]  |  <  |  >  |  \  |     |      | LFT | HME |  UP | END |     |   |
-// |      |     |     |     |     |     |      |     | LFT | DWN | RGT |     |   |
+// |  [   |  ]  |  <  |  >  |  \  |     |      |     |     |     |     |     | = |
+// |   +  |  -  |  *  |  /  |  =  |     |      |     |     |     |     |     |   |
 //                   | TRNS | TRNS | TRNS |           | TRNS| TRNS | TRNS |
                         bindings = <
-   &kp TILDE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT	      &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR   &kp MINUS
-   &kp LBKT   &kp RBKT  &kp LT   &kp GT    &kp BSLH  &none            &none      &kp HOME  &kp UP     &kp END    &none      &none
-   &none      &none     &none    &none     &none    &none             &none      &kp LEFT  &kp DOWN   &kp RIGHT  &none      &none
+   &kp TILDE  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT	     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR   &kp MINUS
+   &kp LBKT   &kp RBKT   &kp LT    &kp GT     &kp BSLH   &none               &none      &none     &none      &none     &none      &kp EQUAL
+   &kp PLUS   &kp MINUS  &kp STAR  &kp BSLH   &kp EQUAL  &none               &none      &none     &none      &none     &none      &none
                           	                &trans  &trans  &trans                      &trans  &trans   &trans
                         >;
                 };
 
                 right_layer {
 // -----------------------------------------------------------------------------------------
-// | BTLDR|  !  |  @  |  #  |  $  |  %  |       |  ^  |  &  |  *  |  (  |  )  | BTLDR|
-// | CTRL |     |     |     |     |     |       |     |     |     |     |     |      |
-// | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |       |     |     |     |     |     |      |
-//                    | GUI |     | SPC |       | ENT |     | ALT |
+// | BTLDR|     |     |     |     |     |         |     |     |     |     |     | BTLDR|
+// | CTRL |     |     |     |     |     |         |     |  HME|  UP | END |     |      |
+// | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |         |     | LFT | DWN | RGT |     |      |
+//                    | GUI |     | SPC |           | ENT |     | ALT |
                         bindings = <
-   &bootloader &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT           &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &bootloader
-   &kp LCTRL   &none         &none         &none         &none         &none               &none     &none     &none           &none    &none    &none
-   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none     &none     &none           &none    &none    &none
-                    	     &kp LGUI &trans   &kp SPACE           &kp RET   &trans    &kp RALT
+   &bootloader &none         &none         &none         &none         &none               &none    &none     &none      &none      &none   &bootloader
+   &kp LCTRL   &none         &none         &none         &none         &none               &none    &kp HOME  &kp UP     &kp END    &none   &none
+   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none    &kp LEFT  &kp DOWN   &kp RIGHT  &none   &none
+                    	                &trans  &trans  &trans                                       &trans  &trans  &trans
                         >;
                 };
         };
