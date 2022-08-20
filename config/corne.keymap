@@ -14,68 +14,20 @@
 };
 
 / {
-
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <4 5>;
-            bindings = <&kp ESC>;
-        };
-	
-	combo_left-option {
-            timeout-ms = <50>;
-            key-positions = <22 23>;
-            bindings = <&kp LALT>;
-        };
-        
-         combo_tab {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp TAB>;
-        };
-        
-                    combo_left-control {
-            timeout-ms = <50>;
-            key-positions = <20 21>;
-            bindings = <&kp LCTRL>;
-        };
-        
-                           combo_layer3 {
-            timeout-ms = <50>;
-            key-positions = <5 17>;
-            bindings = <&mo 3>;
-        };
-        
-        
-           	    combo_right-command {
-            timeout-ms = <50>;
-            key-positions = <16 20>;
-            bindings = <&kp RCMD>;
-        };
-                       combo_layer3 {
-            timeout-ms = <50>;
-            key-positions = <6 18>;
-            bindings = <&mo 3>;
-        };   
-
-        
-    };
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC  |  Q/1|  W/2|  E/3|  R/4|  T/5|     |  Y/6|  U/7 |  I/8|  O/9|  P/0| MINUS|     * top row is tap/hold for numbers
-// | TAB  |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | CTR  |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   |  ,  |  .  |  /  | EXCL |
-//                    | mo1 | SHIFT | BSPC |   | SPACE | ENTER  | mo2 |
-
+// |  TAB |  Q/1|  W/2|  E/3|  R/4|  T/5|   |  Y/6|  U/7 |  I/8|  O/9|  P/0| BKSP |     * top row is tap/hold for numbers
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp ESC   &mt N1 Q &mt N2 W  &mt N3 E &mt N4 R &mt N5 T     &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp MINUS
-   &kp TAB   &kp A    &kp S     &kp D    &kp F    &kp G        &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
-   &kp LCTRL &kp Z    &kp X     &kp C    &kp V    &kp B        &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH   &kp EXCL
-                             &mo 1  &kp SHFT  &kp BSPC            &kp SPACE  &kp ENT  &mo 2 
+   &kp TAB   &mt N1 Q &mt N2 W  &mt N3 E &mt N4 R &mt N5 T     &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp BSPC
+   &kp LCTRL &kp A    &kp S     &kp D  &kp F      &kp G        &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
+   &kp LSHFT &kp Z    &kp X     &kp C  &kp V      &kp B        &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH   &kp ESC
+                  &kp LGUI &mo 1 &kp SPACE       &kp RET &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
