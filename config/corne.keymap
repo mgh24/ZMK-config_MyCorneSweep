@@ -71,18 +71,19 @@ combos {
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q/1|  W/2|  E/3|  R/4|  T/5|   |  Y/6|  U/7 |  I/8|  O/9|  P/0| BKSP |     * top row is tap/hold for numbers
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// | ESC  |  Q/1|  W/2|  E/3|  R/4|  T/5|      | Y/6|  U/7 |  I/8|  O/9|  P/0| MINUS |     * top row is tap/hold for numbers
+// | TAB  |  A  |  S  |  D  |  F  |  G  |      | H  |  J   |  K  |  L  |  ;  |   '   |
+// | CTRL |  Z  |  X  |  C  |  V  |  B  |      | N  |  M   |  ,  |  .  |  /  |  EXCL |
+//               |Left Layer| SHFT | BSPC |   | SPACE | RET  |Right Layer|
                         bindings = <
-   &kp TAB   &mt N1 Q &mt N2 W  &mt N3 E &mt N4 R &mt N5 T     &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp BSPC
-   &kp LCTRL &kp A    &kp S     &kp D  &kp F      &kp G        &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
-   &kp LSHFT &kp Z    &kp X     &kp C  &kp V      &kp B        &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH   &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE       &kp RET &mo 2 &kp RALT
+     &kp ESC    &mt N1 Q  &mt N2 W  &mt N3 E &mt N4 R  &mt N5 T      &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp MINUS
+     &kp TAB    &kp A     &kp S     &kp D    &kp F     &kp G         &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
+     &kp LCTRL  &kp Z     &kp X     &kp C    &kp V     &kp B         &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH   &kp EXCL
+                               &mo 1 &kp LSHFT &kp BSPC                 &kp SPACE &kp RET &mo 2
                         >;
                 };
-                lower_layer {
+		
+                left_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -96,7 +97,7 @@ combos {
                         >;
                 };
 
-                raise_layer {
+                right_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
