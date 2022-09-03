@@ -22,17 +22,17 @@
 combos {
         compatible = "zmk,combos";
 	
-	combo_left-option {
+	combo_escape {
             timeout-ms = <50>;
-            key-positions = <25 26>;
-            bindings = <&kp LALT>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
         };
         
-        // combo_tab {
-        //   timeout-ms = <50>;
-        //   key-positions = <12 13>;
-        //   bindings = <&kp TAB>;
-        // };
+         combo_tab {
+           timeout-ms = <50>;
+           key-positions = <12 13>;
+           bindings = <&kp TAB>;
+         };
         
             // combo_left-control {
             //   timeout-ms = <50>;
@@ -40,11 +40,11 @@ combos {
            //    bindings = <&kp LCTRL>;
        // };
         
-                           combo_layer3 {
-            timeout-ms = <50>;
-            key-positions = <4 14>;
-            bindings = <&mo 3>;
-        };
+        // combo_layer3 {
+           // timeout-ms = <50>;
+           // key-positions = <4 14>;
+           // bindings = <&mo 3>;
+       // };
         
         
            	    combo_right-command {
@@ -52,34 +52,28 @@ combos {
             key-positions = <19 20>;
             bindings = <&kp RCMD>;
         };
-                       combo_layer3 {
-            timeout-ms = <50>;
-            key-positions = <5 15>;
-            bindings = <&mo 3>;
-        };   
+          //             combo_layer3 {
+         // timeout-ms = <50>;
+         // key-positions = <5 15>;
+         // bindings = <&mo 3>;
+    // };   
 
         
     };
-        ZMK_MACRO(scrnshot,
-        wait-ms = <30>;
-        tap-ms = <40>;
-        bindings = <&kp LSHFT &kp LCMD &kp N4>;
-    )
 
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-		bindings = <&scrnshot>;
 // -----------------------------------------------------------------------------------------
-// | ESC  |  Q/1|  W/2|  E/3|  R/4|  T/5|      | Y/6|  U/7 |  I/8|  O/9|  P/0| MINUS |     * top row is tap/hold for numbers
-// | TAB  |  A  |  S  |  D  |  F  |  G  |      | H  |  J   |  K  |  L  |  ;  |   '   |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |      | N  |  M   |  ,  |  .  |  /  |  EXCL |
+// | SCRSHT|  Q/1|  W/2|  E/3|  R/4|  T/5|      | Y/6|  U/7 |  I/8|  O/9|  P/0| MINUS |     * top row is tap/hold for numbers
+// | FRCQUT|  A  |  S  |  D  |  F  |  G  |      | H  |  J   |  K  |  L  |  ;  |   '   |
+// | CTRL  |  Z  |  X  |  C  |  V  |  B  |      | N  |  M   |  ,  |  .  |  /  |  EXCL |
 //               |Left Layer| SHFT | BSPC |   | SPACE | RET  |Right Layer|
                         bindings = <
-     &scrnshot  &mt N1 Q  &mt N2 W  &mt N3 E &mt N4 R  &mt N5 T      &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp MINUS
-     &kp TAB    &kp A     &kp S     &kp D    &kp F     &kp G         &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
-     &kp LCTRL  &kp Z     &kp X     &kp C    &kp V     &kp B         &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH   &kp EXCL
+     &kp LS(LG(N4))  &mt N1 Q  &mt N2 W  &mt N3 E &mt N4 R  &mt N5 T      &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp MINUS
+     &kp LA(LG(ESC)) &kp A     &kp S     &kp D    &kp F     &kp G         &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
+     &kp LCTRL       &kp Z     &kp X     &kp C    &kp V     &kp B         &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH   &kp EXCL
                                &mo 1 &kp LSHFT &kp BSPC                 &kp SPACE &kp RET &mo 2
                         >;
                 };
