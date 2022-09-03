@@ -60,6 +60,11 @@ combos {
 
         
     };
+        ZMK_MACRO(scrnshot,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&kp LSHFT &kp LCMD &kp N4>;
+    )
 
         keymap {
                 compatible = "zmk,keymap";
