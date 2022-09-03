@@ -24,7 +24,7 @@ combos {
 	
 	combo_left-option {
             timeout-ms = <50>;
-            key-positions = <24 25>;
+            key-positions = <25 26>;
             bindings = <&kp LALT>;
         };
         
@@ -34,11 +34,11 @@ combos {
         //   bindings = <&kp TAB>;
         // };
         
-             combo_Escape {
-               timeout-ms = <50>;
-               key-positions = <0 1>;
-               bindings = <&kp ESCAPE>;
-        };
+            // combo_left-control {
+            //   timeout-ms = <50>;
+            //   key-positions = <20 21>;
+           //    bindings = <&kp LCTRL>;
+       // };
         
                            combo_layer3 {
             timeout-ms = <50>;
@@ -60,14 +60,6 @@ combos {
 
         
     };
-     macros {
-	        scrnshot: scrnshot_macro {
-		        compatible = "zmk,behavior-macro";
-		        label = "SCRNSHOT";
-		        #binding-cells = <0>;
-		        bindings = <&kp LSHFT &kp LCMD &kp N4>;
-	        };
-   };		
 
         keymap {
                 compatible = "zmk,keymap";
@@ -78,8 +70,8 @@ combos {
 // | TAB  |  A  |  S  |  D  |  F  |  G  |      | H  |  J   |  K  |  L  |  ;  |   '   |
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |      | N  |  M   |  ,  |  .  |  /  |  EXCL |
 //               |Left Layer| SHFT | BSPC |   | SPACE | RET  |Right Layer|
-                        bindings = <&scrnshot> 
-     &scrnshot  &mt N1 Q  &mt N2 W  &mt N3 E &mt N4 R  &mt N5 T      &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp MINUS
+                        bindings = <
+     &kp ESC    &mt N1 Q  &mt N2 W  &mt N3 E &mt N4 R  &mt N5 T      &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp MINUS
      &kp TAB    &kp A     &kp S     &kp D    &kp F     &kp G         &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
      &kp LCTRL  &kp Z     &kp X     &kp C    &kp V     &kp B         &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH   &kp EXCL
                                &mo 1 &kp LSHFT &kp BSPC                 &kp SPACE &kp RET &mo 2
