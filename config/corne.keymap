@@ -73,7 +73,7 @@ combos {
                         bindings = <
      &kp LS(LG(N4))  &mt N1 Q  &mt N2 W  &mt N3 E &mt N4 R  &mt N5 T      &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp MINUS
      &kp LA(LG(ESC)) &kp A     &kp S     &kp D    &kp F     &kp G         &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
-     &kp LCTRL       &kp Z     &kp X     &kp C    &kp V     &kp B         &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH   &kp EXCL
+     &kp LCTRL       &kp Z     &kp X     &kp C    &kp V     &kp B         &kp N    &kp M    &kp COMMA &kp DOT  &kp QMARK   &kp EXCL
                                &mo 1 &kp LSHFT &kp BSPC                 &kp SPACE &kp RET &mo 2
                         >;
                 };
