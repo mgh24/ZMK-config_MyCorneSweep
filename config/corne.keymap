@@ -22,15 +22,15 @@
 combos {
         compatible = "zmk,combos";
 	
-	combo_escape {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
+	//combo_escape {
+         // timeout-ms = <50>;
+         // key-positions = <0 1>;
+         // bindings = <&kp ESC>;
+     // };
         
          combo_tab {
            timeout-ms = <50>;
-           key-positions = <12 13>;
+           key-positions = <0 1>;
            bindings = <&kp TAB>;
          };
         
@@ -66,15 +66,15 @@ combos {
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | SCRSHT|  Q/1|  W/2|  E/3|  R/4|  T/5|      | Y/6|  U/7 |  I/8|  O/9|  P/0| MINUS |     * top row is tap/hold for numbers
-// | FRCQUT|  A  |  S  |  D  |  F  |  G  |      | H  |  J   |  K  |  L  |  ;  |   '   |
-// | CTRL  |  Z  |  X  |  C  |  V  |  B  |      | N  |  M   |  ,  |  .  |  /  |  EXCL |
+// | ESC |  Q/1|  W/2|  E/3|  R/4|  T/5|      | Y/6|  U/7 |  I/8|  O/9|  P/0| MINUS |     * top row is tap/hold for numbers
+// | TAB |  A  |  S  |  D  |  F  |  G  |      | H  |  J   |  K  |  L  |  ;  |   '   |
+// | CTRL|  Z  |  X  |  C  |  V  |  B  |      | N  |  M   |  ,  |  .  |  /  |  EXCL |
 //               |Left Layer| SHFT | BSPC |   | SPACE | RET  |Right Layer|
                         bindings = <
-     &kp LS(LG(N4))  &mt N1 Q  &mt N2 W  &mt N3 E &mt N4 R  &mt N5 T      &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp MINUS
-     &kp LA(LG(ESC)) &kp A     &kp S     &kp D    &kp F     &kp G         &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
-     &kp LCTRL       &kp Z     &kp X     &kp C    &kp V     &kp B         &kp N    &kp M    &kp COMMA &kp DOT  &kp QMARK   &kp EXCL
-                               &mo 1 &kp LSHFT &kp BSPC                 &kp SPACE &kp RET &mo 2
+     &kp ESC    &mt N1 Q  &mt N2 W  &mt N3 E &mt N4 R  &mt N5 T               &mt N6 Y &mt N7 U &mt N8 I  &mt N9 O &mt N0 P   &kp MINUS
+     &kp TAB    &kp A     &kp S     &kp D    &kp F     &mt LS(LG(N4)) G       &kp H    &kp J    &kp K     &kp L    &kp SEMI   &kp SQT
+     &kp LCTRL  &kp Z     &kp X     &kp C    &kp V     &mt LA(LG(ESC)) B      &kp N    &kp M    &kp COMMA &kp DOT  &kp QMARK   &kp EXCL
+                               &mo 1 &kp LSHFT &kp BSPC                         &kp SPACE &kp RET &mo 2
                         >;
                 };
 		
