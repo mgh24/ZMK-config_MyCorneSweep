@@ -21,13 +21,7 @@
 / {
 combos {
         compatible = "zmk,combos";
-	
-	//combo_escape {
-         // timeout-ms = <50>;
-         // key-positions = <0 1>;
-         // bindings = <&kp ESC>;
-     // };
-        
+	        
          combo_tab {
            timeout-ms = <50>;
            key-positions = <15 16>;
@@ -39,25 +33,13 @@ combos {
             //   key-positions = <20 21>;
            //    bindings = <&kp LCTRL>;
        // };
-        
-        // combo_layer3 {
-           // timeout-ms = <50>;
-           // key-positions = <4 14>;
-           // bindings = <&mo 3>;
-       // };
-        
-        
+               
            	    combo_right-command {
             timeout-ms = <50>;
             key-positions = <19 20>;
             bindings = <&kp RCMD>;
         };
-          //             combo_layer3 {
-         // timeout-ms = <50>;
-         // key-positions = <5 15>;
-         // bindings = <&mo 3>;
-    // };   
-
+    
         
     };
 
